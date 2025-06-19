@@ -1,0 +1,40 @@
+// Definition of a Node in a singly linked list
+struct Node {
+    int data;
+    Node* next;
+    Node(int data)
+    {
+        this->data = data;
+        this->next = nullptr;
+    }
+};
+
+// operation on singly Linked list are
+                          1. Traversal --------2.c++
+                          2. Searching---------3.c++
+                          3. Length------------4.c++
+                          4. Insertion--------at beginning,at end,at Specific Position---------5.c++
+                          5. Deletion---------at beginning,at end,at Specific Position---------6.c++
+                          6. Modify --------------7.c++
+                          7. Reversing------------8.c++
+
+
+// operation on Doubly Linked List
+        1. node representaion--------------1.c++
+        2. Traversal-----------------------2.c++
+        3. Finding Length------------------3.c++
+        4. Insertion-----------------------4.c++
+        5. Deletion------------------------5.c++
+        Disadvantages of Doubly Linked List
+                    -More complex than singly linked lists: Doubly linked lists are more complex than singly linked lists, as they require additional pointers for each node.
+                    -More memory overhead: Doubly linked lists require more memory overhead than singly linked lists, as each node stores two pointers instead of one.
+        Applications of Doubly Linked List
+                    -Implementation of undo and redo functionality in text editors.
+                    -Cache implementation where quick insertion and deletion of elements are required.
+                    -Browser history management to navigate back and forth between visited pages.
+                    -Music player applications to manage playlists and navigate through songs efficiently.
+                    -Implementing data structures like Deque (double-ended queue) for efficient insertion and deletion at both ends.
+// operation on Circular Linked List
+        1. Insertion--------1.c++
+        2. DFeletion--------2.c++
+        3. Searching--------3.c++
