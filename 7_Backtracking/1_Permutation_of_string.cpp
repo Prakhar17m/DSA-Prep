@@ -6,10 +6,8 @@ public:
         if (s1.length() > s2.length()) {
             return false;
         }
-        
         unordered_map<char, int> s1Count;
         unordered_map<char, int> s2Count;
-        
         for (int i = 0; i < s1.length(); i++) {
             s1Count[s1[i]]++;
             s2Count[s2[i]]++;
@@ -18,7 +16,6 @@ public:
         if (s1Count == s2Count) {
             return true;
         }
-        
         int left = 0;
         for (int right = s1.length(); right < s2.length(); right++) {
             s2Count[s2[right]]++;
@@ -34,7 +31,6 @@ public:
                 return true;
             }
         }
-        
         return false;        
     }
 };
