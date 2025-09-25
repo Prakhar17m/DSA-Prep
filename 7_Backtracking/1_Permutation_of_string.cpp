@@ -12,7 +12,6 @@ public:
             s1Count[s1[i]]++;
             s2Count[s2[i]]++;
         }
-        
         if (s1Count == s2Count) {
             return true;
         }
@@ -24,9 +23,7 @@ public:
             if (s2Count[s2[left]] == 0) {
                 s2Count.erase(s2[left]);
             }
-            
             left++;
-            
             if (s1Count == s2Count) {
                 return true;
             }
