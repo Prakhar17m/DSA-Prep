@@ -21,7 +21,7 @@ class DoublyList{
         head = NULL;
         tail = NULL;
     }
-    void insertAtHaed(int val){
+    void insertAtHead(int val){
         Node* newNode = new Node(val);
         if(head == NULL){
             head = newNode;
@@ -32,6 +32,30 @@ class DoublyList{
             head->prev = newNode;
             head = newNode;
         }
+    }
+    void insertAtPosition(int pos,int val){
+        Node *newNode = new Node(val);
+        if(pos==1){
+            insertAtHead(val);
+            return;
+        }
+        Node* temp = head;
+        int count =1;
+        while(temp != NULL && count<pos-1){
+            temp = temp->next;
+            count++;
+        }
+        if(temp ==NULL){
+            insertAtTail(val);
+            return;
+        }
+        newNode->next = temp->next;
+        newNode->prev = temp;
+        if(temp->next !=NULL){
+            temp->next->prev = newNode;
+        }
+        temp->next = newNode;
+        return;
     }
     void insertAtTail(int val){
         Node* newNode = new Node(val);
