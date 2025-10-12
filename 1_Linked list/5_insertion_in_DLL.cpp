@@ -33,6 +33,19 @@ class DoublyList{
             head = newNode;
         }
     }
+    void insertAtTail(int val){
+        Node* newNode = new Node(val);
+        if(tail ==NULL){
+            tail = newNode;
+            head = newNode;
+        }
+        else{
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
+    }
+    
     void printlist(){
         Node* temp = head;
         while(temp != NULL){
@@ -46,9 +59,13 @@ class DoublyList{
 int main(){
     DoublyList dll;
     dll.printlist();
-    dll.insertAtHaed(10);
-    dll.insertAtHaed(20);
-    dll.insertAtHaed(30);
+    // dll.insertAtHaed(10);
+    // dll.insertAtHaed(20);
+    // dll.insertAtHaed(30);
+    // dll.printlist();
+    dll.insertAtTail(10);
+    dll.insertAtTail(20);
+    dll.insertAtTail(30);
     dll.printlist();
     return 0;
 }
