@@ -11,6 +11,9 @@ struct Node
   Node(int x) { data = x; next = prev = NULL; }
 }; */
 
+
+
+
 class Solution {
   public:
     void deleteAllOccurOfX(struct Node** head_ref, int x) {
