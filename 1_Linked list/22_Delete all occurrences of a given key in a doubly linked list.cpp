@@ -14,6 +14,10 @@ struct Node
 
 
 
+
+
+
+
 class Solution {
   public:
     void deleteAllOccurOfX(struct Node** head_ref, int x) {
