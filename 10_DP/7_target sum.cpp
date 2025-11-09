@@ -1,6 +1,8 @@
-// practice link = https://www.geeksforgeeks.org/problems/partitions-with-given-difference/1
+// practice link = https://leetcode.com/problems/target-sum/description/
+ // p2 = https://www.geeksforgeeks.org/problems/target-sum-1626326450/1
+
 class Solution {
-  public:
+public:
     int countsubset(vector<int>& arr , int sum){
         int n = arr.size();
         vector<vector<int>> t(n+1,vector<int> (sum+1 , 0));
@@ -19,21 +21,20 @@ class Solution {
         }
         return t[n][sum];
     }
-    int countPartitions(vector<int>& arr, int diff) {
-        // Code here
+    int findTargetSumWays(vector<int>& nums, int target) {
         int totalsum=0;
         int sum = 0;
-        for(int s =0 ; s< arr.size();s++){
-            totalsum += arr[s];
+        for(int s =0 ; s< nums.size();s++){
+            totalsum += nums[s];
         }
-        if(diff> totalsum) {
+        if(abs(target)> totalsum) {
             return 0;
         }
-        if((diff+totalsum)%2!= 0){
+        if((target+totalsum)%2!= 0){
             return 0;
         }
-        sum = (diff + totalsum )/ 2;
-        return countsubset(arr,sum);
-        
+        sum = (target + totalsum )/ 2;
+        return countsubset(nums,sum);
     }
+
 };
