@@ -1,5 +1,4 @@
 //practice link = https://www.geeksforgeeks.org/problems/shortest-common-supersequence0322/1
-//p2  = https://leetcode.com/problems/shortest-common-supersequence/description/
 
 
 class Solution {
