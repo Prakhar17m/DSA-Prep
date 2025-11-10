@@ -1,4 +1,5 @@
-//practice link = https://www.geeksforgeeks.org/problems/longest-common-substring1452/1\
+//practice link = https://www.geeksforgeeks.org/problems/longest-common-substring1452/1
+//p2 = https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/
 
 class Solution {
   public:
